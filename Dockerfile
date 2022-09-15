@@ -21,7 +21,7 @@ RUN mkdir /lambda
 COPY app.R /lambda
 RUN chmod 755 -R /lambda
 
-RUN printf '#!/bin/sh\ncd /lambda\nRscript app.R' > /var/runtime/bootstrap \
+RUN printf '#!/bin/sh\ncd /lambda\nRscript app.r' > /var/runtime/bootstrap \
   && chmod +x /var/runtime/bootstrap
 
 CMD ["parity"]

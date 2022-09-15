@@ -1,0 +1,23 @@
+service: r_test_s
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+  memorySize: 2048 # optional, in MB, default is 1024
+  timeout: 900 # optional, in seconds, default is 6
+  environment: ${file(env.yml)}
+  deploymentBucket:
+    name: deploy-dados
+
+functions:
+  se-v:
+    name: r_test
+    image: 
+      uri: 321102677516.dkr.ecr.us-east-1.amazonaws.com/embarca-ecr:lambda_r
+
+      	
+
+
+	

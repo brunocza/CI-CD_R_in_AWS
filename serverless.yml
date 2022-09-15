@@ -1,4 +1,4 @@
-service: r_test_s
+service: r-test-s
 
 frameworkVersion: '3'
 
@@ -13,7 +13,7 @@ provider:
 
 functions:
   se-v:
-    name: r_test
+    name: r-test
     image: 
       uri: 321102677516.dkr.ecr.us-east-1.amazonaws.com/embarca-ecr:lambda_r
 

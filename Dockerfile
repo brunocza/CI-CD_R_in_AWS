@@ -18,7 +18,7 @@ RUN Rscript -e "install.packages(c('httr', 'jsonlite', 'logger', 'remotes'), rep
 RUN Rscript -e "remotes::install_github('mdneuzerling/lambdr')"
 
 RUN mkdir /lambda
-COPY app.R /lambda
+COPY app.r /lambda
 RUN chmod 755 -R /lambda
 
 RUN printf '#!/bin/sh\ncd /lambda\nRscript app.r' > /var/runtime/bootstrap \
